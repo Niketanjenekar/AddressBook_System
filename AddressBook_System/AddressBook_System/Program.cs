@@ -14,8 +14,8 @@ namespace AddressBook_System
             
             
             Contacts_Book contactOne = new Contacts_Book();
-            contactOne.Contact();
-            contactOne.EditContact();
+            
+            contactOne.DeleteContact();
                                     
             Console.ReadLine();
         }
