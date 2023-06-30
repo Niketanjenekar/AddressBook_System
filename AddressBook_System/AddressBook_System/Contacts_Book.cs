@@ -15,7 +15,6 @@ namespace AddressBook_System
         {
             AddressBook addressBook = new AddressBook();
             Console.WriteLine("Welcome, You had created a New Contact here : ");
-            
 
             Console.WriteLine("Please Press Enter to Create a New Registration:");
             Console.ReadLine();
@@ -35,20 +34,22 @@ namespace AddressBook_System
             addressBook.phoneNumber = Console.ReadLine();
             Console.WriteLine("Please Enter the Email :");
             addressBook.email = Console.ReadLine();
-
-            
             list.Add(addressBook);
-
             foreach (AddressBook item in list)
             {
-                Console.WriteLine("First Name = "+ item.firstName + "\n" +"Last Name "+ item.lastName +"\n"+ "Address = "+ item.address +
-                                  "City Name = " + item.city + "\n" + "State Name " + item.state + "\n" + "Zip-Code = " + item.zipCode +
-                                  "Phone Number = " + item.phoneNumber + "\n" + "Email " + item.email+"\n" );
-            }
+                Console.WriteLine("First Name = "+ item.firstName);
+                Console.WriteLine("Last Name "+ item.lastName);
+                Console.WriteLine("Address = " + item.address);
+                Console.WriteLine("City Name = " + item.city);
+                Console.WriteLine("State Name " + item.state);                
+                Console.WriteLine("Zip-Code = " + item.zipCode);
+                Console.WriteLine("Phone Number = " + item.phoneNumber);
+                Console.WriteLine("Email " + item.email);
+                Console.WriteLine();
+            }        
             
-            
-            
-            Console.WriteLine("The data has been added");
+            Console.WriteLine("The data has been added");            
         }
+        
     }
 }

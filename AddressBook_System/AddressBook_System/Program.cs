@@ -13,9 +13,13 @@ namespace AddressBook_System
             Console.WriteLine("Welcome to Address Book System Problem : ");
             
             
-            Contacts_Book contacts = new Contacts_Book();
-            contacts.Contact();
-
+            Contacts_Book contactOne = new Contacts_Book();
+            contactOne.Contact();
+            contactOne.EditContact();
+            
+            Contacts_Book contactsTwo = new Contacts_Book();
+            contactsTwo.Contact();
+            contactsTwo.EditContact();
             
             Console.ReadLine();
         }
