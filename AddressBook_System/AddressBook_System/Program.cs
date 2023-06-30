@@ -12,6 +12,11 @@ namespace AddressBook_System
         {
             Console.WriteLine("Welcome to Address Book System Problem : ");
             
+            
+            Contacts_Book contacts = new Contacts_Book();
+            contacts.Contact();
+
+            
             Console.ReadLine();
         }
     }
