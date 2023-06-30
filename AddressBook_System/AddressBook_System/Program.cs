@@ -16,11 +16,7 @@ namespace AddressBook_System
             Contacts_Book contactOne = new Contacts_Book();
             contactOne.Contact();
             contactOne.EditContact();
-            
-            Contacts_Book contactsTwo = new Contacts_Book();
-            contactsTwo.Contact();
-            contactsTwo.EditContact();
-            
+                                    
             Console.ReadLine();
         }
     }
