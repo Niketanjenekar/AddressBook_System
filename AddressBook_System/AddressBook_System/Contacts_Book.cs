@@ -8,33 +8,22 @@ using System.Threading.Tasks;
 
 namespace AddressBook_System
 {
-    public class Contacts_Book
+    public class Contacts_Book : Program
     {
         List<AddressBook> list = new List<AddressBook>();
-        
-        public void DeleteContact()
+        public void AddContact(string fName, string sName, string adress, string cities, string states, 
+                                string zip_code, string phone, string eMail)
         {
             AddressBook addressBook = new AddressBook();
             Console.WriteLine("Welcome, You had created a New Contact here : ");
-
-            Console.WriteLine("Please Press Enter to Create a New Registration:");
-            Console.ReadLine();
-            Console.WriteLine("Please Enter the First name");
-            addressBook.firstName = Console.ReadLine();
-            Console.WriteLine("Please Enter the Last name");
-            addressBook.lastName = Console.ReadLine();
-            Console.WriteLine("Please Enter the Address :");
-            addressBook.address = Console.ReadLine();
-            Console.WriteLine("Please Enter the Name of the City :");
-            addressBook.city = Console.ReadLine();
-            Console.WriteLine("Please Enter the Name of the State :");
-            addressBook.state = Console.ReadLine();
-            Console.WriteLine("Please Enter the ZIP-Code :");
-            addressBook.zipCode = Console.ReadLine();
-            Console.WriteLine("Please Enter the Phone Number:");
-            addressBook.phoneNumber = Console.ReadLine();
-            Console.WriteLine("Please Enter the Email :");
-            addressBook.email = Console.ReadLine();
+            addressBook.firstName = fName;
+            addressBook.lastName = sName;
+            addressBook.address = adress;
+            addressBook.city = cities;
+            addressBook.state = states;
+            addressBook.zipCode = zip_code;
+            addressBook.phoneNumber = phone;
+            addressBook.email = eMail;
             list.Add(addressBook);
             foreach (AddressBook item in list)
             {
@@ -50,18 +39,7 @@ namespace AddressBook_System
             }
             Console.WriteLine("The data has been added");
             
-            //To delete the Contact,
-            Console.WriteLine("Please enter the First Name to delete the contact :");
-            string name = Console.ReadLine();
-            if (name.Contains(addressBook.firstName))
-            {
-                list.Remove(addressBook);
-                Console.WriteLine("The Contact of Person is deleted");
-            }
-            else
-            {
-                Console.WriteLine("The Name Entered is not Present in the data");
-            }
+            
         }
     }
 }
